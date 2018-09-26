@@ -7,7 +7,7 @@ import { Document, Page } from 'react-pdf';
 
 const { Content } = Layout;
 const cryptr = new Cryptr('nk<%4]<`(6Q@X3A(0gBS5&l[X3dIE.');
-const backend = process.env.backendUrl;
+const backend = process.env.REACT_APP_BACKEND;
 
 class Home extends Component {
 
@@ -25,7 +25,7 @@ class Home extends Component {
     }
 
     getDocuments = () => {
-        axios.get('http://localhost:5000/api/file')
+        axios.get(`${backend}/api/file`)
             .then(response => response.data.content)
             .then(data => {
                 this.setState({ documents: data });
@@ -45,12 +45,12 @@ class Home extends Component {
     }
 
     viewFile = (item) => {
-        axios.get('http://localhost:5000/api/token')
+        axios.get(`${backend}/api/token`)
             .then(response => response.data.content)
             .then(data => {
                 this.setState({
                     file: {
-                        url: `http://localhost:5000/api/view?file=${item}`,
+                        url: `${backend}/api/view?file=${item}`,
                         withCredentials: true,
                         httpHeaders: {
                             'Authorization': `Bearer ${cryptr.decrypt(data)}`

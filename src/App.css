@@ -26,3 +26,54 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+.myFloatingBtn {
+  position: fixed;
+  top: 15px !important;
+  right: 15px !important;
+}
+
+.myIncreaseBtn {
+  position: fixed;
+  top: 60px !important;
+  right: 15px !important;
+}
+
+.myDecreaseBtn {
+  position: fixed;
+  top: 105px !important;
+  right: 15px !important;
+}
+
+.react-pdf__Page__canvas {
+  width: 100% !important;
+  height: auto !important;
+}
+
+.ant-layout {
+  background: #303030 !important;
+}
+
+.ant-list {
+  box-shadow: 0 8px 6px -6px #e36d39;
+}
+
+a {
+  color: #e36d39;
+}
+
+a:hover {
+  opacity: 0.5;
+  color: #e36d39;
+}
+
+.ant-btn-primary {
+  background-color: #e36d39;
+  border-color: #e36d39;
+}
+
+.ant-btn-primary:hover {
+  opacity: 0.5;
+  background-color: #e36d39;
+  border-color: #e36d39;
+}

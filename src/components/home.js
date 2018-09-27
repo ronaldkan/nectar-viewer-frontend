@@ -19,7 +19,7 @@ class Home extends Component {
             file: null,
             currentPage: 1,
             numPages: null,
-            isViewable: false,
+            isViewable: true,
             currentScale: 2
         };
     }
@@ -37,11 +37,11 @@ class Home extends Component {
     componentDidMount() {
         document.addEventListener('contextmenu', event => event.preventDefault());
         this.getDocuments();
-        isIncognito().then(response => response)
-            .then(data => {
-            }).catch(err => {
-                this.setState({ isViewable: true })
-            });
+        // isIncognito().then(response => response)
+        //     .then(data => {
+        //     }).catch(err => {
+        //         this.setState({ isViewable: true })
+        //     });
     }
 
     viewFile = (item) => {

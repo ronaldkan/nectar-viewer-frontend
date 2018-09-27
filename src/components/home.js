@@ -35,7 +35,7 @@ class Home extends Component {
     }
 
     componentDidMount() {
-        // document.addEventListener('contextmenu', event => event.preventDefault());
+        document.addEventListener('contextmenu', event => event.preventDefault());
         this.getDocuments();
         isIncognito().then(response => response)
             .then(data => {
@@ -113,7 +113,7 @@ class Home extends Component {
                                         file={file}
                                         onLoadSuccess={this.onDocumentLoadSuccess}
                                     >
-                                        <Page pageNumber={currentPage} scale={currentScale}>
+                                        <Page renderMode={"svg"} renderTextLayer={false} pageNumber={currentPage} scale={currentScale}>
                                         </Page>
                                     </Document>
                                 </Content>

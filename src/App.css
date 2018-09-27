@@ -77,3 +77,8 @@ a:hover {
   background-color: #e36d39;
   border-color: #e36d39;
 }
+
+svg {
+  width: 100% !important;
+  height: 100% !important;
+}

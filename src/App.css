@@ -82,3 +82,9 @@ svg {
   width: 100% !important;
   height: 100% !important;
 }
+
+@media print {
+  html, body {
+     display: none;  /* hide whole page */
+  }
+}

@@ -133,8 +133,8 @@ class Home extends Component {
                             isViewing ?
                                 <div>
                                     <Button onClick={this.goBack} className='myFloatingBtn' type="primary" shape="circle" icon="close" size='large' />
-                                    <Button onClick={this.increasePage} className='myIncreaseBtn' type="primary" shape="circle" icon="plus" size='large' />
-                                    <Button onClick={this.decreasePage} className='myDecreaseBtn' type="primary" shape="circle" icon="minus" size='large' />
+                                    {/* <Button onClick={this.increasePage} className='myIncreaseBtn' type="primary" shape="circle" icon="plus" size='large' />
+                                    <Button onClick={this.decreasePage} className='myDecreaseBtn' type="primary" shape="circle" icon="minus" size='large' /> */}
                                 </div>
 
                                 : null

@@ -61,7 +61,7 @@ class Home extends Component {
     }
 
     goBack = () => {
-        this.setState({ isViewing: false })
+        this.setState({ isViewing: false, currentPage: 1 })
     }
 
     increasePage = () => {
